@@ -16,11 +16,13 @@ public class BookService {
     static List<Book> bookArrayList = getBookList();
 
     public BookService() {
-        bookArrayList = new ArrayList<>();
-        Book bookIdiot = new Book(1, "Idiot", "Dostoevsky", "drama", 1869, 700);
-        Book bookFinancier = new Book(2, "Financier", "Theodore Dreiser", "novel", 1912, 750);
-        bookArrayList.add(bookIdiot);
-        bookArrayList.add(bookFinancier);
+        if(bookArrayList == null){
+            bookArrayList = new ArrayList<>();
+            Book bookIdiot = new Book(1, "Idiot", "Dostoevsky", "drama", 1869, 700);
+            Book bookFinancier = new Book(2, "Financier", "Theodore Dreiser", "novel", 1912, 750);
+            bookArrayList.add(bookIdiot);
+            bookArrayList.add(bookFinancier);
+        }
     }
 
     /**
@@ -42,7 +44,37 @@ public class BookService {
         return bookArrayList.get(id);
     }
 
+    /**
+     * Get list
+     * @return
+     */
     public static List<Book> getBookList() {
         return bookArrayList;
+    }
+
+    /**
+     * Add book object
+     * @param book
+     * @return
+     */
+    public Book addBook(Book book){
+        bookArrayList.add(book);
+        return book;
+    }
+
+    /**
+     * Delete book via id
+     * @param id
+     */
+    public void deleteBook(int id){
+        bookArrayList.remove(id);
+    }
+
+
+    /**
+     * Update book
+     */
+    public void updateBook(){
+
     }
 }

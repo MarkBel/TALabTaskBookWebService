@@ -13,6 +13,10 @@ public class Book {
     private int year;
     private int pageCount;
 
+    public Book() {
+        super();
+    }
+
     public Book(int id, String bookName, String auhtor, String bookType, int year, int pageCount) {
         this.id = id;
         this.bookName = bookName;
