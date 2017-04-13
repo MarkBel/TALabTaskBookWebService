@@ -1,3 +1,5 @@
 com\epam\controller\BookControl.class
+com\epam\exception\LoginException.class
 com\epam\model\Book.class
 com\epam\service\BookService.class
+com\epam\utils\Matcher.class

@@ -8,7 +8,7 @@ public class Book {
 
     private int id;
     private String bookName;
-    private String auhtor;
+    private String author;
     private String bookType;
     private int year;
     private int pageCount;
@@ -17,10 +17,10 @@ public class Book {
         super();
     }
 
-    public Book(int id, String bookName, String auhtor, String bookType, int year, int pageCount) {
+    public Book(int id, String bookName, String author, String bookType, int year, int pageCount) {
         this.id = id;
         this.bookName = bookName;
-        this.auhtor = auhtor;
+        this.author = author;
         this.bookType = bookType;
         this.year = year;
         this.pageCount = pageCount;
@@ -42,12 +42,12 @@ public class Book {
         this.bookName = bookName;
     }
 
-    public String getAuhtor() {
-        return auhtor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAuhtor(String auhtor) {
-        this.auhtor = auhtor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getBookType() {
@@ -86,7 +86,7 @@ public class Book {
         if (year != book.year) return false;
         if (pageCount != book.pageCount) return false;
         if (bookName != null ? !bookName.equals(book.bookName) : book.bookName != null) return false;
-        if (auhtor != null ? !auhtor.equals(book.auhtor) : book.auhtor != null) return false;
+        if (author != null ? !author.equals(book.author) : book.author != null) return false;
         return bookType != null ? bookType.equals(book.bookType) : book.bookType == null;
     }
 
@@ -94,7 +94,7 @@ public class Book {
     public int hashCode() {
         int result = id;
         result = 31 * result + (bookName != null ? bookName.hashCode() : 0);
-        result = 31 * result + (auhtor != null ? auhtor.hashCode() : 0);
+        result = 31 * result + (author != null ? author.hashCode() : 0);
         result = 31 * result + (bookType != null ? bookType.hashCode() : 0);
         result = 31 * result + year;
         result = 31 * result + pageCount;
@@ -106,7 +106,7 @@ public class Book {
         return "Book{" +
                 "id=" + id +
                 ", bookName='" + bookName + '\'' +
-                ", auhtor='" + auhtor + '\'' +
+                ", author='" + author + '\'' +
                 ", bookType='" + bookType + '\'' +
                 ", year=" + year +
                 ", pageCount=" + pageCount +

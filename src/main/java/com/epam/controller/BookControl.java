@@ -45,5 +45,14 @@ public class BookControl {
         return bookService.addBook(book);
     }
 
+    @PUT
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void updateBook(@PathParam("id") int id,Book book)
+    {
+        bookService.updateBook(id,book);
+
+    }
+
 
 }
